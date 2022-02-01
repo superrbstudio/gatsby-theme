@@ -25,7 +25,7 @@ const Index = () => {
   return (
     <>
       <Seo data={page.data} />
-      <h1>{title.text}</h1>
+      <h1>{title && (title.text)}</h1>
     </>
   )
 }

@@ -55,11 +55,13 @@ const Header = () => {
         <Link to="/" className="main-header__logo">
           Back To Home
         </Link>
-        <MenuToggle
-          className="main-header__toggle"
-          label="Open Nav"
-          closeLabel="Close Nav"
-        />
+        {isMobile && (
+          <MenuToggle
+            className="main-header__toggle"
+            label="Open Nav"
+            closeLabel="Close Nav"
+          />
+        )}
         <nav
           className="main-header__nav nav"
           aria-hidden={isMobile && !navOpen}
