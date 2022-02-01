@@ -1,17 +1,9 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import React from 'react'
 import Homepage from '../types/pages/homepage'
 import { Seo } from '@superrb/gatsby-addons/components'
 
-const Index = () => {
-  const data = useStaticQuery(graphql`
-    query HomepageQuery {
-      page: prismicHomepage {
-        ...Homepage
-      }
-    }
-  `)
-
+const Index = ({ data }) => {
   /** @type {Homepage} page */
   const page = data.page
   if (!page) {
@@ -19,15 +11,23 @@ const Index = () => {
   }
 
   const {
-    data: { title },
+    data: { page_title },
   } = page
 
   return (
     <>
       <Seo data={page.data} />
-      <h1>{title && (title.text)}</h1>
+      {page_title && <h1>{page_title}</h1>}
     </>
   )
 }
+
+export const query = graphql`
+  query HomepageQuery {
+    page: prismicHomepage {
+      ...Homepage
+    }
+  }
+`
 
 export default Index
