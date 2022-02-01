@@ -1,6 +1,5 @@
+import { Page, RichText } from '@superrb/gatsby-addons/types'
 import { graphql } from 'gatsby'
-import Page from '../page'
-import RichText from '../rich-text'
 
 interface BlogPost extends Page {
   data:

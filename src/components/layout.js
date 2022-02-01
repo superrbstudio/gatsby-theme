@@ -5,12 +5,9 @@ import Header from './header'
 import Footer from './footer'
 
 export const Layout = ({ children }) => {
-
   return (
     <>
-      <Helmet>
-          {/* External CSS Stylesheets Here */}
-      </Helmet>
+      <Helmet>{/* External CSS Stylesheets Here */}</Helmet>
       <SkipTo />
       <Header />
       <main>{children}</main>

@@ -12,7 +12,7 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <>
-      <h1>{pixels}</h1>
+      <h1>{post.data.title.text}</h1>
       <RichText render={post.data.content.richText} />
     </>
   )

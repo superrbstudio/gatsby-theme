@@ -1,11 +1,11 @@
 import React, { useCallback, useContext, useEffect, useRef } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import SiteConfig from '../types/site-config'
 import MainHeader from '../types/main-header'
 import MenuToggle from './navigation/mobile-menu-toggle'
 import { NavContext } from './../context/nav-context-provider'
-import useIsMobile from '../hooks/use-is-mobile'
 import { linkResolver } from '../utils/linkResolver'
+import { SiteConfig } from '@superrb/gatsby-addons/types'
+import { useIsMobile } from '@superrb/gatsby-addons/hooks'
 
 const Header = () => {
   // const data = useStaticQuery(graphql`
@@ -59,9 +59,10 @@ const Header = () => {
           Back To Home
         </Link>
         <MenuToggle className="main-header__toggle" label="Open Nav" />
-        <div className="main-header__nav" aria-hidden={isMobile && !navOpen}>
-        
-        </div>
+        <div
+          className="main-header__nav"
+          aria-hidden={isMobile && !navOpen}
+        ></div>
       </div>
     </header>
   )

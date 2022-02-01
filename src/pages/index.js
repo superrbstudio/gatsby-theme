@@ -13,7 +13,6 @@ const Index = () => {
 
   /** @type {Homepage} page */
   const page = data.page
-  console.log(data)
   if (!page) {
     return null
   }
@@ -22,7 +21,12 @@ const Index = () => {
     data: { title },
   } = page
 
-  return <h1>{title.text}</h1>
+  return (
+    <>
+      <Seo data={page.data} />
+      <h1>{title.text}</h1>
+    </>
+  )
 }
 
 export default Index

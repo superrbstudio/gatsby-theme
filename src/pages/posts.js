@@ -1,13 +1,10 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-// import PostsPage from '../types/pages/homepage'
+import BlogPost from '../types/pages/blog-post'
 
 const Posts = () => {
   const data = useStaticQuery(graphql`
     query PostsPageQuery {
-      # page: prismicPostsPage {
-      #   ...PostsPage
-      # }
       posts: allPrismicBlogPost {
         nodes {
           uid
@@ -21,6 +18,7 @@ const Posts = () => {
     }
   `)
 
+  /** @type {BlogPost[]} posts */
   const posts = data.posts.nodes
   if (posts.length === 0) {
     return null

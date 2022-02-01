@@ -1,8 +1,13 @@
 import * as React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { Metadata } from '@superrb/gatsby-addons/types'
 
-const Seo = ({ data }) => {
+interface Props {
+  data: Metadata
+}
+
+const Seo = ({ data }: Props) => {
   const queryData = useStaticQuery(graphql`
     query SiteQuery {
       site {
@@ -40,11 +45,11 @@ const Seo = ({ data }) => {
   if (data.meta_image !== undefined && data.meta_image !== null) {
     meta.push({
       name: `og:image`,
-      content: data.meta_image.url,
+      content: data.meta_image?.fluid?.src,
     })
     meta.push({
       name: `twitter:image:src`,
-      content: data.meta_image.url,
+      content: data.meta_image?.fluid?.src,
     })
   }
 

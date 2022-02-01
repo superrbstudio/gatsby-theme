@@ -1,5 +1,5 @@
+import { useLockBodyScroll } from '@superrb/gatsby-addons/hooks'
 import React, { createContext, useCallback, useState } from 'react'
-import useLockBodyScroll from '../hooks/use-lock-body-scroll'
 
 export const NavContext = createContext({
   navOpen: false,
@@ -12,7 +12,7 @@ export const NavContextProvider = ({ children }) => {
   useLockBodyScroll(navOpen)
 
   const toggleNav = useCallback(() => {
-    setNavOpen(navOpen => !navOpen)
+    setNavOpen((navOpen) => !navOpen)
   }, [setNavOpen])
 
   const closeNav = useCallback(() => {
