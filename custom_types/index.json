@@ -10,7 +10,7 @@
   "value": "main_header.json"
 }, {
   "id": "main_footer",
-  "name": "Main Feader",
+  "name": "Main Footer",
   "repeatable": false,
   "value": "main_footer.json"
 }, {
