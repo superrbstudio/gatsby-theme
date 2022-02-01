@@ -8,16 +8,16 @@ import { SiteConfig } from '@superrb/gatsby-addons/types'
 import { useIsMobile } from '@superrb/gatsby-addons/hooks'
 
 const Header = () => {
-  // const data = useStaticQuery(graphql`
-  //   query MainHeaderQuery {
-  //     header: prismicMainheader {
-  //       ...MainHeader
-  //     }
-  //     config: prismicSiteconfig {
-  //       ...SiteConfig
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    query MainHeaderQuery {
+      header: prismicMainHeader {
+        ...MainHeader
+      }
+      config: prismicSiteConfig {
+        ...SiteConfig
+      }
+    }
+  `)
 
   const isMobile = useIsMobile()
   const { navOpen } = useContext(NavContext)
@@ -37,32 +37,39 @@ const Header = () => {
     }
   }, [handleScroll])
 
-  // /** @type {MainHeader} header */
-  // const header = data?.header
-  // if (!header) {
-  //   return null
-  // }
+  /** @type {MainHeader} header */
+  const header = data?.header
+  if (!header) {
+    return null
+  }
 
-  // /** @type {SiteConfig} config */
-  // const config = data?.config
-  // if (!config) {
-  //   return null
-  // }
+  /** @type {SiteConfig} config */
+  const config = data?.config
+  if (!config) {
+    return null
+  }
 
   return (
-    <header
-      className={`main-header ${navOpen ? 'open' : ''}`}
-      ref={headerElement}
-    >
+    <header className="main-header" ref={headerElement}>
       <div className="main-header__container">
         <Link to="/" className="main-header__logo">
           Back To Home
         </Link>
         <MenuToggle className="main-header__toggle" label="Open Nav" />
-        <div
-          className="main-header__nav"
-          aria-hidden={isMobile && !navOpen}
-        ></div>
+        <nav className="main-header__nav" aria-hidden={isMobile && !navOpen}>
+          <ul className="main-header__nav-list">
+            {header.data.navigation_items.map((link, index) => (
+              <li key={index} className="main-header__nav-item">
+                <Link
+                  to={linkResolver(link.link)}
+                  className="main-header__nav-link"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </header>
   )

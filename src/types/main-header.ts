@@ -11,18 +11,11 @@ interface MainHeader {
         url: string
       }
     }>
-    button_label: string
-    button_url: {
-      link_type: string
-      type: string
-      uid: string
-      url: string
-    }
   }
 }
 
 export const query = graphql`
-  fragment MainHeader on PrismicMainheader {
+  fragment MainHeader on PrismicMainHeader {
     data {
       navigation_items {
         label
@@ -32,13 +25,6 @@ export const query = graphql`
           uid
           url
         }
-      }
-      button_label
-      button_url {
-        link_type
-        type
-        uid
-        url
       }
     }
   }

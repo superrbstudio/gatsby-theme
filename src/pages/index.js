@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import Homepage from '../types/pages/homepage'
+import { Seo } from '@superrb/gatsby-addons/components'
 
 const Index = () => {
   const data = useStaticQuery(graphql`

@@ -7,7 +7,13 @@ import Footer from './footer'
 export const Layout = ({ children }) => {
   return (
     <>
-      <Helmet>{/* External CSS Stylesheets Here */}</Helmet>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+      </Helmet>
       <SkipTo />
       <Header />
       <main>{children}</main>
