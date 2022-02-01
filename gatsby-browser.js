@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreviewProvider } from 'gatsby-plugin-prismic-previews'
-
+import { Layout } from './src/components/layout'
 import { repositoryConfigs } from './src/utils/prismicPreviews'
 
 import './src/stylesheets/style.sass'
@@ -16,7 +16,9 @@ export const wrapRootElement = ({ element }) => (
       )}
     >
       <PrismicPreviewProvider repositoryConfigs={repositoryConfigs}>
-        {element}
+        <Layout>
+          {element}
+        </Layout>
       </PrismicPreviewProvider>
     </PrismicProvider>
   </StateInspector>
