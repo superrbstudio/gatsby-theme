@@ -55,15 +55,19 @@ const Header = () => {
         <Link to="/" className="main-header__logo">
           Back To Home
         </Link>
-        <MenuToggle className="main-header__toggle" label="Open Nav" />
-        <nav className="main-header__nav" aria-hidden={isMobile && !navOpen}>
-          <ul className="main-header__nav-list">
+        <MenuToggle
+          className="main-header__toggle"
+          label="Open Nav"
+          closeLabel="Close Nav"
+        />
+        <nav
+          className="main-header__nav nav"
+          aria-hidden={isMobile && !navOpen}
+        >
+          <ul className="nav__list">
             {header.data.navigation_items.map((link, index) => (
-              <li key={index} className="main-header__nav-item">
-                <Link
-                  to={linkResolver(link.link)}
-                  className="main-header__nav-link"
-                >
+              <li key={index} className="nav__item">
+                <Link to={linkResolver(link.link)} className="nav__link">
                   {link.label}
                 </Link>
               </li>
