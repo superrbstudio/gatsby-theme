@@ -1,15 +1,11 @@
+import { Link } from '@superrb/gatsby-addons/types'
 import { graphql } from 'gatsby'
 
 interface MainHeader {
   data: {
     navigation_items: Array<{
       label: string
-      link: {
-        link_type: string
-        type: string
-        uid: string
-        url: string
-      }
+      link: Link
     }>
   }
 }
