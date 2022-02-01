@@ -11,10 +11,6 @@
  */
 exports.linkResolver = (doc) => {
   switch (doc.type) {
-    case 'post': {
-      return `/blog/${doc.uid}`
-    }
-
     default:
       return '/'
   }

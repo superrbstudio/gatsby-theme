@@ -27,7 +27,7 @@ const Header = () => {
     requestAnimationFrame(() => {
       //If header needs to be sticky, do it here
     })
-  }, [isMobile, headerElement])
+  }, [])
 
   useEffect(() => {
     handleScroll()
