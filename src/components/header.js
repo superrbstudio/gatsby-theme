@@ -1,6 +1,7 @@
 import React, { useCallback, useContext, useEffect, useRef } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import SiteConfig from '../types/site-config'
+import MainHeader from '../types/main-header'
 import MenuToggle from './navigation/mobile-menu-toggle'
 import { NavContext } from './../context/nav-context-provider'
 import useIsMobile from '../hooks/use-is-mobile'
