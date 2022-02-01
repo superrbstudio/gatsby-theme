@@ -13,6 +13,8 @@ export const query = graphql`
     type
     tags
     data {
+      page_title
+
       meta_description
       meta_navigation_title
       meta_robots

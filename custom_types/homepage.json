@@ -5,6 +5,13 @@
       "config" : {
         "label" : "Slug"
       }
+    },
+    "page_title" : {
+      "type" : "Text",
+      "config" : {
+        "label": "Page Title",
+        "placeholder": "Page Title"
+      }
     }
   },
   "Meta" : {
