@@ -4,6 +4,7 @@ import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreviewProvider } from 'gatsby-plugin-prismic-previews'
 import { Layout } from './src/components/layout'
 import { repositoryConfigs } from './src/utils/prismicPreviews'
+import NavContextProvider from './src/context/nav-context-provider'
 
 import './src/stylesheets/style.sass'
 import { StateInspector } from 'reinspect'
@@ -16,9 +17,9 @@ export const wrapRootElement = ({ element }) => (
       )}
     >
       <PrismicPreviewProvider repositoryConfigs={repositoryConfigs}>
-        <Layout>
-          {element}
-        </Layout>
+        <NavContextProvider>
+          <Layout>{element}</Layout>
+        </NavContextProvider>
       </PrismicPreviewProvider>
     </PrismicProvider>
   </StateInspector>

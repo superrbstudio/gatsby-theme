@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { SkipTo } from './skip-to'
-// import Header from './header'
+import Header from './header'
 import Footer from './footer'
 
 export const Layout = ({ children }) => {
@@ -12,7 +12,7 @@ export const Layout = ({ children }) => {
           {/* External CSS Stylesheets Here */}
       </Helmet>
       <SkipTo />
-      {/* <Header /> */}
+      <Header />
       <main>{children}</main>
       <Footer />
     </>
