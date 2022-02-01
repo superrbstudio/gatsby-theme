@@ -2,11 +2,14 @@ import { useIsMobile } from '@superrb/gatsby-addons/hooks'
 import React, { useCallback, useContext } from 'react'
 import { NavContext } from '../../context/nav-context-provider'
 
-const MenuToggle = ({ label, className, ...props }) => {
+const MenuToggle = ({
+  className,
+  label = 'Open Nav',
+  closeLabel = 'Close Nav',
+  ...props
+}) => {
   const { navOpen, toggleNav } = useContext(NavContext)
   const isMobile = useIsMobile()
-
-  const screenreaderText = navOpen ? 'Close Nav' : 'Open Nav'
 
   return (
     <button
@@ -19,8 +22,8 @@ const MenuToggle = ({ label, className, ...props }) => {
       aria-hidden={!isMobile}
       {...props}
     >
-      Open Nav
-      <span className="screenreader-text">{screenreaderText}</span>
+      {navOpen ? '×' : '꠵'}
+      <span className="screenreader-text">{navOpen ? closeLabel : label}</span>
     </button>
   )
 }
