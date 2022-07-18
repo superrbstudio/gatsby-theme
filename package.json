@@ -34,11 +34,11 @@
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,json,scss,md}\"",
     "build": "gatsby build",
-    "develop": "netlify dev -c 'gatsby develop'",
-    "start": "npm run clean && npm run develop",
+    "develop": "wrangler pages dev -- gatsby develop",
+    "start": "yarn clean && yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "start:prod": "npm run clean && npm run build && npm run serve"
+    "start:prod": "yarn clean && yarn build && wrangler pages dev public"
   },
   "repository": {
     "type": "git",
