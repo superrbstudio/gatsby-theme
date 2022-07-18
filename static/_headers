@@ -1,0 +1,15 @@
+/*
+  Referrer-Policy: no-referrer-when-downgrade, strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Cache-Control: public, max-age=3600
+
+/fonts/*
+  Cache-Control: public, max-age=2592000
+
+/images/*
+  Cache-Control: public, max-age=2592000
+
+/icons/*
+  Cache-Control: public, max-age=2592000
