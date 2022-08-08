@@ -22,3 +22,18 @@ export const wrapRootElement = ({ element }) => (
     </PrismicPreviewProvider>
   </PrismicProvider>
 )
+
+export const onRenderBody = ({ pathname, setBodyAttributes }) => {
+  if (pathname === '/') {
+    pathname = 'home'
+  }
+
+  setBodyAttributes({
+    'class': `page ${[
+      ...pathname
+        .split('/')
+        .filter((x) => !!x)
+        .map((slug) => `page--${slug}`),
+    ].join(' ')}`
+  })
+}
