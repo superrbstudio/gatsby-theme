@@ -29,7 +29,7 @@ export const onRenderBody = ({ pathname, setBodyAttributes }) => {
   }
 
   setBodyAttributes({
-    'class': `page ${[
+    className: `page ${[
       ...pathname
         .split('/')
         .filter((x) => !!x)
