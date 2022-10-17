@@ -19,7 +19,7 @@
       "config" : {
         "labels" : null,
         "choices" : {
-          "fullwidthimage" : {
+          "full_width_image" : {
             "type" : "Slice",
             "fieldset" : "Full Width Image",
             "description" : "A full width image",
