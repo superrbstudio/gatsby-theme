@@ -1,17 +1,17 @@
-import * as React from 'react'
+import React, { StrictMode } from 'react'
 import { Link } from 'gatsby'
 import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreviewProvider } from 'gatsby-plugin-prismic-previews'
 import { Layout } from './src/components/layout'
+
 import { repositoryConfigs } from './src/utils/prismicPreviews'
 import NavContextProvider from './src/context/nav-context-provider'
 
 import './src/stylesheets/style.sass'
-import { StateInspector } from 'reinspect'
 import { TranslationContextProvider } from '@superrb/gatsby-addons/context'
 
 export const wrapRootElement = ({ element }) => (
-  <StateInspector name="App">
+  <StrictMode>
     <PrismicProvider
       internalLinkComponent={({ href, ...props }) => (
         <Link to={href} {...props} />
@@ -25,7 +25,7 @@ export const wrapRootElement = ({ element }) => (
         </TranslationContextProvider>
       </PrismicPreviewProvider>
     </PrismicProvider>
-  </StateInspector>
+  </StrictMode>
 )
 
 export const onRouteUpdate = ({ location: { pathname }, prevLocation }) => {
