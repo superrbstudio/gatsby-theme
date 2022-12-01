@@ -20,7 +20,7 @@ prismic theme --theme-url https://github.com/superrbstudio/gatsby-theme
 
 Enter the repository name when prompted, and this will be created for you.
 
-## Developing (Local Development)
+## Build (Local Development)
 
 Use the following to perform a development build and run a local server.
 * copy `.env.example` to `.env.development`
