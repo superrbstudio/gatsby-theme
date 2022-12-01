@@ -8,8 +8,19 @@ You will need Prismic API keys to start to build this project. Please refer to `
 
 * Node v16.x
 * Yarn
+* [Prismic CLI](https://npmjs.com/package/prismic-cli)
 
-## Getting started (Local Development)
+## Getting Started
+
+Create a new site and Prismic repository using the following command
+
+```sh
+prismic theme --theme-url https://github.com/superrbstudio/gatsby-theme
+```
+
+Enter the repository name when prompted, and this will be created for you.
+
+## Developing (Local Development)
 
 Use the following to perform a development build and run a local server.
 * copy `.env.example` to `.env.development`
