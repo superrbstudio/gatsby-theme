@@ -10,7 +10,7 @@ You will need Prismic API keys to start to build this project. Please refer to `
 * Yarn
 * [Prismic CLI](https://npmjs.com/package/prismic-cli)
 
-## Getting Started
+## Getting Started
 
 Create a new site and Prismic repository using the following command
 
