@@ -7,6 +7,9 @@ export const onCreateWebpackConfig = async ({ actions }) => {
     resolve: {
       alias: {
         ProjectRoot: path.resolve(__dirname, '.'),
+        '@superrb/gatsby-addons-cms': path.resolve(
+          './node_modules/@superrb/gatsby-addons-prismic/',
+        ),
       },
     },
   })

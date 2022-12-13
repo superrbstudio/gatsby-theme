@@ -6326,11 +6326,6 @@ type SiteConfigFragment = { readonly data: { readonly email_address: string | nu
 
 type StructuredDataOrganisationFragment = { readonly data: { readonly company_name: string | null, readonly company_website: string | null, readonly contact_point_email: string | null, readonly contact_point_telephone: string | null, readonly address_street: string | null, readonly address_locality: string | null, readonly address_region: string | null, readonly address_postal_code: string | null, readonly address_country: string | null } };
 
-type StructuredDataOrganisationQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type StructuredDataOrganisationQueryQuery = { readonly organisation: { readonly data: { readonly company_name: string | null, readonly company_website: string | null, readonly contact_point_email: string | null, readonly contact_point_telephone: string | null, readonly address_street: string | null, readonly address_locality: string | null, readonly address_region: string | null, readonly address_postal_code: string | null, readonly address_country: string | null } } | null };
-
 type NodeQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
