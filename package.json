@@ -5,8 +5,8 @@
   "dependencies": {
     "@prismicio/helpers": "^2.0.0",
     "@prismicio/react": "^2.5.0",
-    "@superrb/gatsby-addons": "git+https://github.com/superrbstudio/gatsby-addons#filesystem_support",
-    "@superrb/gatsby-addons-prismic": "^0.0.3",
+    "@superrb/gatsby-addons": "^6.0.1",
+    "@superrb/gatsby-addons-prismic": "^0.0.6",
     "gatsby": "^4.9.0",
     "gatsby-plugin-gdpr-cookies": "^2.0.9",
     "gatsby-plugin-image": "2.3.0",
@@ -20,11 +20,12 @@
     "gatsby-source-filesystem": "^4.3.0",
     "gatsby-source-prismic": "^5.2.3",
     "moment": "^2.29.4",
-    "node-sass": "^6.0.1",
+    "node-sass": "^8.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "reinspect": "^1.1.0",
+    "sass": "^1.57.1",
     "yup": "^0.32.11"
   },
   "devDependencies": {
@@ -46,10 +47,10 @@
     "format": "prettier --write \"**/*.{js,jsx,json,scss,md}\"",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "start": "npm run clean && npm run develop",
+    "start": "yarn clean && netlify dev",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "start:prod": "yarn clean && yarn build && wrangler pages dev public"
+    "start:prod": "yarn clean && yarn build && yarn serve"
   },
   "repository": {
     "type": "git",

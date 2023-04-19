@@ -6,7 +6,7 @@ You will need Prismic API keys to start to build this project. Please refer to `
 
 ## Requirements
 
-* Node v16.x
+* Node v18.x
 * Yarn
 * [Prismic CLI](https://npmjs.com/package/prismic-cli)
 
