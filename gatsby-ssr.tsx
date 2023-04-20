@@ -27,19 +27,3 @@ export const wrapRootElement = ({ element }) => (
     </PrismicProvider>
   </StrictMode>
 )
-
-export const onRouteUpdate = ({ location: { pathname }, prevLocation }) => {
-  if (pathname === '/') {
-    pathname = 'home'
-  }
-
-  document.body.setAttribute(
-    'class',
-    `page ${[
-      ...pathname
-        .split('/')
-        .filter((x) => !!x)
-        .map((slug) => `page--${slug}`),
-    ].join(' ')}`,
-  )
-}
