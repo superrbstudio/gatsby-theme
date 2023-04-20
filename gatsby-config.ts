@@ -12,6 +12,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: 'Gatsby Prismic Blog',
     description: 'Blog example for Gatsby & Prismic',
+    siteUrl: process.env.GATSBY_SITE_URL,
   },
   trailingSlash: 'never',
   plugins: [
