@@ -48,5 +48,5 @@ The production build files will be found in `/public`
 
 ## More information
 
-* [Gatsby.js Documentation](https://v4.gatsbyjs.com/docs/)
+* [Gatsby.js Documentation](https://v5.gatsbyjs.com/docs/)
 * [Prismic + Gatsby.js Documentation](https://prismic.io/docs/technologies/gatsby)
