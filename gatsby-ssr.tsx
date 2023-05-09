@@ -5,10 +5,9 @@ import { PrismicPreviewProvider } from 'gatsby-plugin-prismic-previews'
 import { Layout } from './src/components/layout'
 
 import { repositoryConfigs } from './src/utils/prismicPreviews'
-import NavContextProvider from './src/context/nav-context-provider'
 
 import './src/stylesheets/style.sass'
-import { TranslationContextProvider } from '@superrb/gatsby-addons/context'
+import { ContextWrapper } from '@superrb/gatsby-addons/components'
 
 export const wrapRootElement = ({ element }) => (
   <StrictMode>
@@ -18,11 +17,9 @@ export const wrapRootElement = ({ element }) => (
       )}
     >
       <PrismicPreviewProvider repositoryConfigs={repositoryConfigs}>
-        <TranslationContextProvider>
-          <NavContextProvider>
-            <Layout>{element}</Layout>
-          </NavContextProvider>
-        </TranslationContextProvider>
+        <ContextWrapper>
+          <Layout>{element}</Layout>
+        </ContextWrapper>
       </PrismicPreviewProvider>
     </PrismicProvider>
   </StrictMode>
