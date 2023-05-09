@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { linkResolver } from '../utils/linkResolver'
+import { useMergePrismicPreviewData } from 'gatsby-plugin-prismic-previews'
+import MainFooter from '../types/main-footer'
+import { SiteConfig } from '@superrb/gatsby-addons/types'
 
 const Footer = () => {
-  const data = useStaticQuery(graphql`
+  const staticData = useStaticQuery(graphql`
     query MainFooterQuery {
       footer: prismicMainFooter {
         ...MainFooter
@@ -13,6 +16,15 @@ const Footer = () => {
       }
     }
   `)
+  const {
+    data,
+    isPreview,
+  }: {
+    data: {
+      footer: MainFooter
+      config: SiteConfig
+    }
+  } = useMergePrismicPreviewData(staticData)
 
   /** @type {MainFooter} footer */
   const footer = data.footer

@@ -5,6 +5,7 @@ import { Page, Seo } from '@superrb/gatsby-addons/components'
 import { PageStub } from '@superrb/gatsby-addons/types'
 import { SliceZone } from '@prismicio/react'
 import { components } from '../slices'
+import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 const Index = ({
   data,
@@ -38,4 +39,4 @@ export const query = graphql`
   }
 `
 
-export default Index
+export default withPrismicPreview(Index)

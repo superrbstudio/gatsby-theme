@@ -1,14 +1,15 @@
 import React, { useCallback, useContext, useEffect, useRef } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import MainHeader, { MainHeaderLink } from '../types/main-header'
-import { NavContext } from '../context/nav-context-provider'
 import { linkResolver } from '../utils/linkResolver'
 import { SiteConfig } from '@superrb/gatsby-addons/types'
 import { useIsMobile } from '@superrb/gatsby-addons/hooks'
 import { MenuToggle } from '@superrb/gatsby-addons/components'
+import { useMergePrismicPreviewData } from 'gatsby-plugin-prismic-previews'
+import { NavContext } from '@superrb/gatsby-addons/context'
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
+  const staticData = useStaticQuery(graphql`
     query MainHeaderQuery {
       header: prismicMainHeader {
         ...MainHeader
@@ -18,6 +19,16 @@ const Header = () => {
       }
     }
   `)
+  const {
+    data,
+    isPreview,
+  }: {
+    data: {
+      header: MainHeader
+      config: SiteConfig
+    }
+    isPreview: boolean
+  } = useMergePrismicPreviewData(staticData)
 
   const isMobile = useIsMobile()
   const { navOpen } = useContext(NavContext)

@@ -4,6 +4,7 @@ import { graphql, PageProps } from 'gatsby'
 import React from 'react'
 import * as yup from 'yup'
 import ContactPageType from '../types/pages/contact-page'
+import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 const NATURE_OF_ENQUIRY_OPTIONS = [
   'General Enquiry',
@@ -57,4 +58,4 @@ export const query = graphql`
   }
 `
 
-export default ContactPage
+export default withPrismicPreview(ContactPage)

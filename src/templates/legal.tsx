@@ -4,6 +4,7 @@ import Homepage from '../types/pages/homepage'
 import { Page, Seo } from '@superrb/gatsby-addons/components'
 import { PageStub } from '@superrb/gatsby-addons/types'
 import LegalPageType from '../types/pages/legal-page'
+import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 const LegalPage = ({
   data,
@@ -33,4 +34,4 @@ export const query = graphql`
   }
 `
 
-export default LegalPage
+export default withPrismicPreview(LegalPage)
