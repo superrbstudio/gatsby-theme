@@ -8,6 +8,10 @@
 import { componentResolverFromMap } from 'gatsby-plugin-prismic-previews'
 import { linkResolver } from './linkResolver'
 
+import Index from '../templates/homepage'
+import Contact from '../templates/contact'
+import Legal from '../templates/legal'
+
 // import Post from '../templates/post'
 // import Posts from '../templates/posts'
 /**
@@ -23,6 +27,10 @@ export const repositoryConfigs = [
   {
     repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
     linkResolver,
-    componentResolver: componentResolverFromMap({}),
+    componentResolver: componentResolverFromMap({
+      homepage: Index,
+      contact_page: Contact,
+      legal_page: Legal,
+    }),
   },
 ]
