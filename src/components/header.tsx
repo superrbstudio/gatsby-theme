@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import MainHeader, { MainHeaderLink } from '../types/main-header'
 import { linkResolver } from '../utils/linkResolver'
 import { SiteConfig } from '@superrb/gatsby-addons/types'
-import { useIsMobile } from '@superrb/gatsby-addons/hooks'
+import { useEventListener, useIsMobile } from '@superrb/gatsby-addons/hooks'
 import { MenuToggle } from '@superrb/gatsby-addons/components'
 import { useMergePrismicPreviewData } from 'gatsby-plugin-prismic-previews'
 import { NavContext } from '@superrb/gatsby-addons/context'
@@ -40,13 +40,7 @@ const Header = () => {
     })
   }, [])
 
-  useEffect(() => {
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: false })
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [handleScroll])
+  useEventListener('scroll', handleScroll, { passive: true })
 
   /** @type {MainHeader} header */
   const header = data?.header
