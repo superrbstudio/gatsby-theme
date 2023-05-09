@@ -50,9 +50,6 @@ const Header = () => {
 
   /** @type {SiteConfig} config */
   const config = data?.config
-  if (!config) {
-    return null
-  }
 
   return (
     <header className="main-header" ref={headerElement}>
