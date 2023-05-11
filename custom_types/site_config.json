@@ -1,93 +1,93 @@
 {
-  "Main" : {
-    "company_name" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Company Name"
+  "Main": {
+    "company_name": {
+      "type": "Text",
+      "config": {
+        "label": "Company Name"
       }
     },
-    "email_address" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Email Address"
+    "email_address": {
+      "type": "Text",
+      "config": {
+        "label": "Email Address"
       }
     },
-    "phone_number" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Phone Number"
+    "phone_number": {
+      "type": "Text",
+      "config": {
+        "label": "Phone Number"
       }
     },
-    "facebook_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Facebook Username"
+    "facebook_username": {
+      "type": "Text",
+      "config": {
+        "label": "Facebook Username"
       }
     },
-    "instagram_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Instagram Username"
+    "instagram_username": {
+      "type": "Text",
+      "config": {
+        "label": "Instagram Username"
       }
     },
-    "twitter_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Twitter Username"
+    "twitter_username": {
+      "type": "Text",
+      "config": {
+        "label": "Twitter Username"
       }
     },
-    "linkedin_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "LinkedIn Username"
+    "linkedin_username": {
+      "type": "Text",
+      "config": {
+        "label": "LinkedIn Username"
       }
     },
-    "tiktok_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "LinkedIn Username"
+    "tiktok_username": {
+      "type": "Text",
+      "config": {
+        "label": "TikTok Username"
       }
     },
-    "dribbble_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "LinkedIn Username"
+    "dribbble_username": {
+      "type": "Text",
+      "config": {
+        "label": "Dribbble Username"
       }
     },
-    "youtube_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "LinkedIn Username"
+    "youtube_username": {
+      "type": "Text",
+      "config": {
+        "label": "YouTube Username"
       }
     },
-    "vimeo_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "LinkedIn Username"
+    "vimeo_username": {
+      "type": "Text",
+      "config": {
+        "label": "Vimeo Username"
       }
     },
-    "discord_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "LinkedIn Username"
+    "discord_username": {
+      "type": "Text",
+      "config": {
+        "label": "Discord Username"
       }
     },
-    "reddit_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "LinkedIn Username"
+    "reddit_username": {
+      "type": "Text",
+      "config": {
+        "label": "Reddit Username"
       }
     },
-    "behance_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "LinkedIn Username"
+    "behance_username": {
+      "type": "Text",
+      "config": {
+        "label": "Behance Username"
       }
     },
-    "spotify_username" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "Spotify Username"
+    "spotify_username": {
+      "type": "Text",
+      "config": {
+        "label": "Spotify Username"
       }
     }
   }
